@@ -1,0 +1,1 @@
+{ "hopId": { "in": "params", "isMongoId": true, "notEmpty": true } }
