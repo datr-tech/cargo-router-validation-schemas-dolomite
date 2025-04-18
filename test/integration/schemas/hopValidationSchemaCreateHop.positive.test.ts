@@ -7,7 +7,10 @@ describe('hopValidationSchemaCreateHop', () => {
     test('should contain the expected schema', () => {
       const expectedSchemaName = 'hopValidationSchemaCreateHop';
       const expectedSchemaDir = path.resolve('./src/schemas');
-      const expectedSchemaPath = path.resolve(expectedSchemaDir, `${expectedSchemaName}.json`);
+      const expectedSchemaPath = path.resolve(
+        expectedSchemaDir,
+        `${expectedSchemaName}.json`,
+      );
       const expectedSchemaContents = fs.readFileSync(expectedSchemaPath, 'utf8');
       const expectedSchemaJson = JSON.parse(expectedSchemaContents);
 

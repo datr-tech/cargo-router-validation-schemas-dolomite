@@ -1,25 +1,32 @@
 import hopValidationSchemaCreateHopJson from './hopValidationSchemaCreateHop.json';
-import hopValidationSchemaUpdateHopJson from './hopValidationSchemaUpdateHop.json';
-import hopValidationSchemaReadHopJson from './hopValidationSchemaReadHop.json';
 import hopValidationSchemaDeleteHopJson from './hopValidationSchemaDeleteHop.json';
-import journeyValidationSchemaCreateJourneyJson from './journeyValidationSchemaCreateJourney.json';
-import journeyValidationSchemaUpdateJourneyJson from './journeyValidationSchemaUpdateJourney.json';
-import journeyValidationSchemaReadJourneyJson from './journeyValidationSchemaReadJourney.json';
-import journeyValidationSchemaDeleteJourneyJson from './journeyValidationSchemaDeleteJourney.json';
+import hopValidationSchemaReadHopJson from './hopValidationSchemaReadHop.json';
+import hopValidationSchemaUpdateHopJson from './hopValidationSchemaUpdateHop.json';
 import journeyTypeValidationSchemaCreateJourneyTypeJson from './journeyTypeValidationSchemaCreateJourneyType.json';
-import journeyTypeValidationSchemaUpdateJourneyTypeJson from './journeyTypeValidationSchemaUpdateJourneyType.json';
-import journeyTypeValidationSchemaReadJourneyTypeJson from './journeyTypeValidationSchemaReadJourneyType.json';
 import journeyTypeValidationSchemaDeleteJourneyTypeJson from './journeyTypeValidationSchemaDeleteJourneyType.json';
+import journeyTypeValidationSchemaReadJourneyTypeJson from './journeyTypeValidationSchemaReadJourneyType.json';
+import journeyTypeValidationSchemaUpdateJourneyTypeJson from './journeyTypeValidationSchemaUpdateJourneyType.json';
+import journeyValidationSchemaCreateJourneyJson from './journeyValidationSchemaCreateJourney.json';
+import journeyValidationSchemaDeleteJourneyJson from './journeyValidationSchemaDeleteJourney.json';
+import journeyValidationSchemaReadJourneyJson from './journeyValidationSchemaReadJourney.json';
+import journeyValidationSchemaUpdateJourneyJson from './journeyValidationSchemaUpdateJourney.json';
 
 export const hopValidationSchemaCreateHop = hopValidationSchemaCreateHopJson;
 export const hopValidationSchemaUpdateHop = hopValidationSchemaUpdateHopJson;
 export const hopValidationSchemaReadHop = hopValidationSchemaReadHopJson;
 export const hopValidationSchemaDeleteHop = hopValidationSchemaDeleteHopJson;
-export const journeyValidationSchemaCreateJourney = journeyValidationSchemaCreateJourneyJson;
-export const journeyValidationSchemaUpdateJourney = journeyValidationSchemaUpdateJourneyJson;
+export const journeyValidationSchemaCreateJourney =
+  journeyValidationSchemaCreateJourneyJson;
+export const journeyValidationSchemaUpdateJourney =
+  journeyValidationSchemaUpdateJourneyJson;
 export const journeyValidationSchemaReadJourney = journeyValidationSchemaReadJourneyJson;
-export const journeyValidationSchemaDeleteJourney = journeyValidationSchemaDeleteJourneyJson;
-export const journeyTypeValidationSchemaCreateJourneyType = journeyTypeValidationSchemaCreateJourneyTypeJson;
-export const journeyTypeValidationSchemaUpdateJourneyType = journeyTypeValidationSchemaUpdateJourneyTypeJson;
-export const journeyTypeValidationSchemaReadJourneyType = journeyTypeValidationSchemaReadJourneyTypeJson;
-export const journeyTypeValidationSchemaDeleteJourneyType = journeyTypeValidationSchemaDeleteJourneyTypeJson;
+export const journeyValidationSchemaDeleteJourney =
+  journeyValidationSchemaDeleteJourneyJson;
+export const journeyTypeValidationSchemaCreateJourneyType =
+  journeyTypeValidationSchemaCreateJourneyTypeJson;
+export const journeyTypeValidationSchemaUpdateJourneyType =
+  journeyTypeValidationSchemaUpdateJourneyTypeJson;
+export const journeyTypeValidationSchemaReadJourneyType =
+  journeyTypeValidationSchemaReadJourneyTypeJson;
+export const journeyTypeValidationSchemaDeleteJourneyType =
+  journeyTypeValidationSchemaDeleteJourneyTypeJson;

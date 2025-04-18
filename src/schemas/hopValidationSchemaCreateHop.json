@@ -1,7 +1,12 @@
 {
-  "journeyId": { "in": "body", "isMongoId": true, "notEmpty": false },
-  "resourceId": { "in": "body", "isMongoId": true, "notEmpty": false },
-  "order": { "default": 0, "in": "body", "isInt": true, "notEmpty": false, "optional": { "values": "undefined" } },
+  "adminStatusId": {
+    "default": "undefined",
+    "in": "body",
+    "isMongoId": true,
+    "notEmpty": false,
+    "optional": { "values": "undefined" }
+  },
+  "adminUserId": { "in": "body", "isMongoId": true, "notEmpty": false },
   "description": {
     "default": "undefined",
     "in": "body",
@@ -10,7 +15,19 @@
     "notEmpty": false,
     "optional": { "values": "undefined" }
   },
-  "name": { "in": "body", "isString": true, "isLength": { "options": { "min": 8, "max": 100 } }, "notEmpty": true },
-  "adminStatusId": { "default": "undefined", "in": "body", "isMongoId": true, "notEmpty": false, "optional": { "values": "undefined" } },
-  "adminUserId": { "in": "body", "isMongoId": true, "notEmpty": false }
+  "journeyId": { "in": "body", "isMongoId": true, "notEmpty": false },
+  "name": {
+    "in": "body",
+    "isString": true,
+    "isLength": { "options": { "min": 8, "max": 100 } },
+    "notEmpty": true
+  },
+  "order": {
+    "default": 0,
+    "in": "body",
+    "isInt": true,
+    "notEmpty": false,
+    "optional": { "values": "undefined" }
+  },
+  "resourceId": { "in": "body", "isMongoId": true, "notEmpty": false }
 }

@@ -4,14 +4,14 @@
   "private": false,
   "description": "Cargo router validation schemas for dolomite",
   "keywords": [
-		"cargo",
+    "cargo",
     "datr.tech",
-		"dolomite",
-		"express",
-		"express-validator",
-		"router",
-		"schemas",
-		"typescript"
+    "dolomite",
+    "express",
+    "express-validator",
+    "router",
+    "schemas",
+    "typescript"
   ],
   "homepage": "https://github.com/datr.tech/cargo-router-validation-schemas-dolomite",
   "repository": {
@@ -62,7 +62,6 @@
     "@eslint/compat": "^1.1.1",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.10.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.13",
     "auto-changelog": "^2.5.0",
