@@ -1,22 +1,44 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { hopValidationSchemaCreateHop } from '../../../dist';
+import { hopValidationSchemaCreateHop } from './../../../dist';
 
 describe('hopValidationSchemaCreateHop', () => {
   describe('positive', () => {
     test('should contain the expected schema', () => {
-      const expectedSchemaName = 'hopValidationSchemaCreateHop';
-      const expectedSchemaDir = path.resolve('./src/schemas');
-      const expectedSchemaPath = path.resolve(
-        expectedSchemaDir,
-        `${expectedSchemaName}.json`,
-      );
-      const expectedSchemaContents = fs.readFileSync(expectedSchemaPath, 'utf8');
-      const expectedSchemaJson = JSON.parse(expectedSchemaContents);
+      const expectedSchema = {
+        adminStatusId: {
+          default: 'undefined',
+          in: 'body',
+          isMongoId: true,
+          notEmpty: false,
+          optional: { values: 'undefined' },
+        },
+        adminUserId: { in: 'body', isMongoId: true, notEmpty: false },
+        description: {
+          default: 'undefined',
+          in: 'body',
+          isString: true,
+          isLength: { options: { min: 1, max: 200 } },
+          notEmpty: false,
+          optional: { values: 'undefined' },
+        },
+        journeyId: { in: 'body', isMongoId: true, notEmpty: false },
+        name: {
+          in: 'body',
+          isString: true,
+          isLength: { options: { min: 8, max: 100 } },
+          notEmpty: true,
+        },
+        order: {
+          default: 0,
+          in: 'body',
+          isInt: true,
+          notEmpty: false,
+          optional: { values: 'undefined' },
+        },
+        resourceId: { in: 'body', isMongoId: true, notEmpty: false },
+      };
 
-      expect(expectedSchemaJson).not.toBeFalsy();
-      expect(hopValidationSchemaCreateHop).not.toBeFalsy();
-      expect(hopValidationSchemaCreateHop).toStrictEqual(expectedSchemaJson);
+      const foundSchema = { ...hopValidationSchemaCreateHop };
+      expect(foundSchema).toStrictEqual(expectedSchema);
     });
   });
 });

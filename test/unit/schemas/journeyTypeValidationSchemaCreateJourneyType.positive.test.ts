@@ -1,6 +1,6 @@
-import { hopValidationSchemaCreateHop } from '@app-crvsd/schemas';
+import { journeyTypeValidationSchemaCreateJourneyType } from '@app-crvsd/schemas';
 
-describe('hopValidationSchemaCreateHop', () => {
+describe('journeyTypeValidationSchemaCreateJourneyType', () => {
   describe('positive', () => {
     test('should contain the expected schema', () => {
       const expectedSchema = {
@@ -20,24 +20,15 @@ describe('hopValidationSchemaCreateHop', () => {
           notEmpty: false,
           optional: { values: 'undefined' },
         },
-        journeyId: { in: 'body', isMongoId: true, notEmpty: false },
         name: {
           in: 'body',
           isString: true,
           isLength: { options: { min: 8, max: 100 } },
           notEmpty: true,
         },
-        order: {
-          default: 0,
-          in: 'body',
-          isInt: true,
-          notEmpty: false,
-          optional: { values: 'undefined' },
-        },
-        resourceId: { in: 'body', isMongoId: true, notEmpty: false },
       };
 
-      const foundSchema = { ...hopValidationSchemaCreateHop };
+      const foundSchema = { ...journeyTypeValidationSchemaCreateJourneyType };
       expect(foundSchema).toStrictEqual(expectedSchema);
     });
   });

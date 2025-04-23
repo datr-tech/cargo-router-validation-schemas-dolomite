@@ -1,6 +1,6 @@
-import { hopValidationSchemaCreateHop } from '@app-crvsd/schemas';
+import { hopValidationSchemaUpdateHop } from './../../../dist';
 
-describe('hopValidationSchemaCreateHop', () => {
+describe('hopValidationSchemaUpdateHop', () => {
   describe('positive', () => {
     test('should contain the expected schema', () => {
       const expectedSchema = {
@@ -11,7 +11,13 @@ describe('hopValidationSchemaCreateHop', () => {
           notEmpty: false,
           optional: { values: 'undefined' },
         },
-        adminUserId: { in: 'body', isMongoId: true, notEmpty: false },
+        adminUserId: {
+          in: 'body',
+          isMongoId: true,
+          notEmpty: false,
+          default: 'undefined',
+          optional: { values: 'undefined' },
+        },
         description: {
           default: 'undefined',
           in: 'body',
@@ -20,12 +26,21 @@ describe('hopValidationSchemaCreateHop', () => {
           notEmpty: false,
           optional: { values: 'undefined' },
         },
-        journeyId: { in: 'body', isMongoId: true, notEmpty: false },
+        hopId: { in: 'params', isMongoId: true, notEmpty: true },
+        journeyId: {
+          in: 'body',
+          isMongoId: true,
+          notEmpty: false,
+          default: 'undefined',
+          optional: { values: 'undefined' },
+        },
         name: {
           in: 'body',
           isString: true,
           isLength: { options: { min: 8, max: 100 } },
-          notEmpty: true,
+          notEmpty: false,
+          default: 'undefined',
+          optional: { values: 'undefined' },
         },
         order: {
           default: 0,
@@ -34,10 +49,16 @@ describe('hopValidationSchemaCreateHop', () => {
           notEmpty: false,
           optional: { values: 'undefined' },
         },
-        resourceId: { in: 'body', isMongoId: true, notEmpty: false },
+        resourceId: {
+          in: 'body',
+          isMongoId: true,
+          notEmpty: false,
+          default: 'undefined',
+          optional: { values: 'undefined' },
+        },
       };
 
-      const foundSchema = { ...hopValidationSchemaCreateHop };
+      const foundSchema = { ...hopValidationSchemaUpdateHop };
       expect(foundSchema).toStrictEqual(expectedSchema);
     });
   });
