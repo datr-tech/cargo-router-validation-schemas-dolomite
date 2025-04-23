@@ -81,5 +81,5 @@
     "node": ">=20.0.9",
     "npm": ">=10.1.0"
   },
-  "main": "/dist/index.js"
+  "main": "./dist/index.js"
 }
